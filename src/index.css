@@ -8,3 +8,23 @@ color: white  !important;
 opacity: 8;
 
 }
+.ant-btn-primary {
+
+    border: none !important;
+    background: black !important;
+   
+    border-radius: 5px !important;
+}
+.ant-input {
+    
+    border-radius: 5px !important;
+}
+
+.ant-input-affix-wrapper {
+   
+    border-radius: 5px !important;
+    
+}
+label{
+    color: white !important;
+}
