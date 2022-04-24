@@ -8,8 +8,11 @@ const Header = () => {
     console.log(e);
   };
   return (
-    <div className="text-white bg-orange-600 flex justify-center items-center w-full space-x-16 mx-auto h-24">
-      <div className="font-bold text-lg">E-Commerce</div>
+    <div className="text-white bg-[#0083BF] flex justify-center items-center w-full space-x-16 mx-auto h-24">
+      <div className="flex items-center">
+        <img className="h-24" src={require(`../../assets/images/ger.png`)} />
+        <div className="font-bold text-lg">MyHuduu.mn</div>
+      </div>
       <div className="bg-white h-[32px] rounded-lg space-x-4">
         <Select defaultValue="Категори" onChange={onChange}>
           <Option value="product">Цагаан идээ</Option>
@@ -25,12 +28,12 @@ const Header = () => {
         <i className="fa-solid fa-magnifying-glass"></i>
       </div>
       <div className=" flex items-center space-x-3">
-        <button className="">Тусламж</button>
+        <button className="bg-[#339CCC] py-2 px-3 rounded-full">Тусламж</button>
         <button className="">Нэвтрэх</button>
-        <button className="bg-blue-600 flex items-center py-[3px] px-5 rounded-2xl space-x-1 font-bold">
+        <button className="bg-[#E28025] flex items-center py-[3px] px-5 rounded-2xl space-x-1  font-bold">
           <div className="text-xl">+</div>
           <Link to="/login">
-            <button> Зар оруулах</button>
+            <div className="text-white"> Зар оруулах</div>
           </Link>
         </button>
       </div>
