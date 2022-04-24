@@ -6,7 +6,7 @@ import Products from "../../components/products";
 const Home = () => {
   return (
     <div className="">
-      <Header />{" "}
+      <Header />
       <div className=" max-w-6xl mx-auto">
         <div className="flex space-x-3 mt-10 justify-between">
           <img src={require(`../../assets/images/ad1.png`)} />

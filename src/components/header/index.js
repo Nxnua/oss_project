@@ -30,12 +30,12 @@ const Header = () => {
         <SearchOutlined style={{ color: "black" }} />
       </div>
       <div className=" flex items-center space-x-3">
-        <button className="">Тусламж</button>
+        <button className="bg-[#339CCC] py-2 px-3 rounded-full">Тусламж</button>
         <button className="">Нэвтрэх</button>
-        <button className="bg-blue-600 flex items-center py-[3px] px-5 rounded-2xl space-x-1 font-bold">
+        <button className="bg-[#E28025] flex items-center py-[3px] px-5 rounded-2xl space-x-1  font-bold">
           <div className="text-xl">+</div>
           <Link to="/login">
-            <button> Зар оруулах</button>
+            <div className="text-white"> Зар оруулах</div>
           </Link>
         </button>
       </div>
