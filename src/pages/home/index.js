@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../../components/header";
+import Footer from "../../components/footer";
 import Category from "../../components/category";
 import Products from "../../components/products";
 const Home = () => {
@@ -66,6 +67,7 @@ const Home = () => {
           <Products name="Аагтай сонгино" img="songino" price="8000₮" />
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

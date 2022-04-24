@@ -1,7 +1,8 @@
 import React from "react";
-import { Form } from "antd";
+import { Form, InputNumber, Input, Button } from "antd";
 import Config from "../../database";
 import { Link } from "react-router-dom";
+import FormItem from "antd/lib/form/FormItem";
 
 const Login = () => {
   const [vals, setVals] = React.useState([]);
@@ -25,30 +26,62 @@ const Login = () => {
   //     });
   //   };
   return (
-    <div className="flex h-screen">
-      <div className="bg-[#0083BF] w-1/2"></div>
-      <div className="flex w-1/2 flex-col justify-center items-center">
-        <div className="text-[#0083BF] text-3xl mb-8">Нэвтрэх</div>
-        <Form
-          layout="vertical"
-          className="flex justify-center items-center flex-col"
-        >
-          <Form.Item name={"name"} label="Нэвтрэх нэр">
-            <input className="border-b-2 w-60 focus:outline-none" value />
-          </Form.Item>
-          <Form.Item name={"password"} label="Нууц үг">
-            <input
-              type={"password"}
-              className="border-b-2 w-60 focus:outline-none"
-              value
-            />
-          </Form.Item>
-          <Link to="/addItem">
-            <button className="bg-[#0083BF] px-9 py-1 rounded-2xl text-white">
+    <div
+      className="flex h-screen bg-cover bg-local justify-center items-center"
+      style={{
+        backgroundImage: `url(${require(`../../assets/images/bgLogin.png`)}) `,
+      }}
+    >
+      <div class=" bg-white/30 backdrop-blur-sm max-w-7xl  rounded-2xl py-10 px-5 grid grid-cols-5">
+        <div className="col-span-2 flex flex-col items-center">
+          <img
+            className="h-20"
+            src={require(`../../assets/images/gerWhite.png`)}
+            alt="gerLogo"
+          />
+          <Form className="w-full  px-3" layout="vertical">
+            <div className=" flex justify-start w-full ">
+              <p className="text-4xl font-semibold text-white mt-1 flex text-left">
+                Нэвтрэх
+              </p>
+            </div>
+            <Form.Item label="Утас" name="phone">
+              <Input
+                name="phone"
+                placeHolder="Таны нэвтрэх утасны дугаар"
+                className="w-full"
+              />
+            </Form.Item>
+            <Form.Item label="Нууц үг" name="password">
+              <Input.Password
+                name="password"
+                allowClear
+                type="password"
+                placeholder="*******"
+              />
+            </Form.Item>
+            <div className="flex justify-end  ">
+              <a className="underline">Нууц үг сэргээх</a>
+            </div>
+            <Button
+              className="mt-4 w-32 rounded-xl"
+              type="primary"
+              htmlType="submit"
+            >
               Нэвтрэх
-            </button>
-          </Link>
-        </Form>
+            </Button>{" "}
+            <p className="text-2xl font-semibold mt-6 w-80 text-white">
+              Та нэг л удаа бүртгүүлээд бүтээгдэхүүнээ бүгдийн зар
+            </p>
+          </Form>
+        </div>
+        <div className="col-span-3 ml-10">
+          <img
+            alt="bgl"
+            className="h-[500px]"
+            src={require(`../../assets/images/bgLogin2.png`)}
+          />
+        </div>
       </div>
     </div>
   );
