@@ -25,6 +25,6 @@ opacity: 8;
     border-radius: 5px !important;
     
 }
-label{
-    color: white !important;
-}
+.ant-select-selector{
+    border-radius: 20px !important;
+} 

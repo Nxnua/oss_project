@@ -2,8 +2,6 @@ import React from "react";
 import { Select } from "antd";
 import { Link } from "react-router-dom";
 import {
-  WalletOutlined,
-  HeartOutlined,
   UserOutlined,
   SearchOutlined,
 } from "@ant-design/icons";
@@ -14,30 +12,34 @@ const Header = () => {
     console.log(e);
   };
   return (
-    <div>
-      <div className="text-white bg-[#0083BF] flex justify-center items-center w-full space-x-16 mx-auto h-24">
-        <div className="flex items-center">
+    <div className="max-w-screen-2xl mx-50 bg-[#ffffff]">
+      <div className="fixed bg-white text-black flex justify-left items-center w-full space-x-32 mx-auto h-24 shadow z-10">
+        <div className="ml-40 flex items-center">
           <Link to="/">
             <img
-              className="h-24"
-              src={require(`../../assets/images/ger.png`)}
+              className="h-10"
+              src={require(`../../assets/images/logo_seoultech.png`)}
             />
           </Link>
           <Link to="/">
-            <div className="font-bold text-lg text-white">MyHuduu.mn</div>
+            <div className="ml-2 font-bold text-lg text-black">STSP</div>
           </Link>
         </div>
-        <div className="bg-white h-[32px] flex items-center rounded-lg space-x-4">
-          <Select defaultValue="Категори" onChange={onChange}>
-            <Option value="product">Цагаан идээ</Option>
-            <Option value="meat">Мах</Option>
-            <Option value="vegetable">Хүнсний ногоо</Option>
-            <Option value="fruit">Жимс</Option>
+
+        <div className=" bg-white h-[16px] flex items-center">
+          <Select defaultValue="Category" onChange={onChange}>
+            <Option value="product">Books</Option>
+            <Option className="w-20" value="meat">Academic dress</Option>
+            <Option value="vegetable">Electronic</Option>
+        {/*    <Option value="fruit">Жимс</Option> */}
           </Select>
+        </div>
+
+        <div className="ml-20 flex items-center">
           <input
-            className="text-black w-64 px-10 focus:outline-none"
+            className=" text-black w-55 px-10 rounded-full focus:outline-line"
             type={"text"}
-            placeholder="Хайх утгаа энд оруулна уу!"
+            placeholder="Search . . ."
           />
           <div className="text-[#5F5F5F]">
             <SearchOutlined
@@ -49,38 +51,26 @@ const Header = () => {
             />
           </div>
         </div>
-        <div className=" flex items-center space-x-3">
-          <div className="flex mt-4 space-x-2">
-            <div>
-              <button className="bg-[#339CCC] pb-2 px-3 rounded-full ml-3">
-                <HeartOutlined />
-              </button>
-              <div className="pr-3">Хадгалсан</div>
-            </div>
-            <div>
-              <button className="bg-[#339CCC] pb-2 px-3 rounded-full ">
-                <WalletOutlined style={{ fontSize: "1₮px" }} />
-              </button>
-              <div className="pr-3">Хэтэвч</div>
-            </div>
-          </div>
+        <div className="ml-20 flex items-center space-x-3">
 
           <Link to="/login">
-            <div className="bg-[#339CCC] py-2 px-6 rounded-full ml-3 flex items-center space-x-2">
+            <div className=" bg-[#339CCC] py-2 px-6 rounded-full flex items-center space-x-2">
               <UserOutlined style={{ color: "white" }} />
-              <span className="text-white">Нэвтрэх</span>
+              <span className=" text-white">Log in</span>
             </div>
           </Link>
-          <button className="bg-[#E28025] flex items-center py-[3px] px-5 rounded-2xl space-x-1  font-bold">
+          <button className=" bg-[#339CCC] flex items-center py-[5px] px-5 rounded-full space-x-2">
             <div className="text-xl">+</div>
             <Link to="/login">
-              <div className="text-white"> Зар оруулах</div>
+              <div className=" text-white">Add product</div>
             </Link>
           </button>
         </div>
       </div>
       <div>
-        <img src={require(`../../assets/images/navbot.png`)} />
+        <img 
+        className="opacity-50 backdrop-blur-sm w-screen h-5/6"  src={require(`../../assets/images/seoultech.jpg`)} />
+        <h2 className="absolute text-4xl text-black top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-25">Welcome to SeoulTech's e-shop! You can sell or buy something that is used in SeoulTech with this website...</h2>
       </div>
     </div>
   );
